@@ -1,0 +1,166 @@
+$light: #efefef;
+$main:#3FA2A2;
+
+.root{
+    position: relative;
+    .img{
+        width: 100% !important;
+        height: 100vh !important;
+        position: relative;
+        z-index: 2;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0,0,0,.5);
+            z-index: 3;
+            width: 100%;
+            height: 100vh;
+        }
+    }
+
+
+    .content{
+        position: absolute;
+        z-index: 10;
+        top: 20%;
+        left: 5%;
+        color: #efefef;
+        h5{
+            color: $main;
+            margin-bottom: 0;
+            font-size: 2rem;
+        }
+        h1{
+            font-size: 7rem;
+            letter-spacing: 3px;
+            line-height: 1.4;
+            font-weight: bold;
+        }
+        .coloredTitle{
+            background-color: rgba(63, 162, 162, .4);
+            display: inline-block;
+            padding: .5rem;
+            border-radius: 5px;
+        }
+
+        .moreBtn{
+            background-color: none;
+            padding: 1rem;
+            color: $light;
+            text-transform: uppercase;
+            border-color: $main;
+            font-size: 1.2rem;
+            &:hover{
+                background-color: $main;
+            }
+        }
+    }
+    
+}
+
+
+@media screen and (max-width: 1500px) {
+    .content{
+        h1{
+            font-size: 6rem !important;
+        }
+        h5{
+            font-size: 1.5rem !important;
+        }
+    }
+}
+
+@media screen and (max-width: 1450px) {
+    .content{
+        h1{
+            font-size: 5.5rem !important;
+        }
+        h5{
+            font-size: 1rem !important;
+        }
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .content{
+        h1{
+            font-size: 5rem !important;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .content{
+        h1{
+            font-size: 4.5rem !important;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .content{
+        h1{
+            font-size: 4rem !important;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .content{
+        h1{
+            font-size: 3.5rem !important;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .root{
+        .img{
+            height: 80vh !important;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .content{
+        h1{
+            font-size: 3rem !important;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .content{
+        h1{
+            font-size: 2.5rem !important;
+        }
+    }
+}
+
+@media screen and (max-height: 550px) {
+    .content{
+        h1{
+            font-size: 4rem !important;
+        }
+    }
+}
+
+@media screen and (max-height: 400px) {
+    .content{
+        top: 30% !important;
+        h1{
+            font-size: 3rem !important;
+        }
+    }
+}
+
+@media screen and (max-height: 380px) {
+    .content{
+        top: 30% !important;
+        h1{
+            font-size: 2.6rem !important;
+        }
+    }
+}

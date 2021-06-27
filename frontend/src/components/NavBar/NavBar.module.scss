@@ -1,0 +1,158 @@
+$light: #efefef;
+$main:#3FA2A2;
+$dark: #183650;
+
+.root{
+    position: absolute;
+    z-index: 10 !important;
+    width: 100%;
+    padding: 1rem;
+    nav{
+        background-color: none;
+        .navList{
+            margin-left: auto;
+            li{
+                margin: 0 1rem;
+                a, p{
+                    color: $light;
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    &:hover{
+                        color: $main;
+                    }
+                }
+                p{
+                    cursor: pointer;
+                }
+            }
+            .flag{
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                img{
+                    width: 30px;
+                }
+            }
+        }
+        .logo{
+            font-size: 2rem;
+            color: $light;
+        }
+        .burger{
+            color: $light;
+            font-size: 2.5rem;
+        }
+    }
+}
+
+.toggler:active, .toggler:focus{
+    box-shadow: none !important;
+}
+
+// Lang
+.lang{
+    position: relative;
+    transition: .5s;
+    &:hover{
+        .langDropDown{
+            top: 85%;
+        }
+    }
+    .langDropDown{
+        transition: .5s;
+        position: absolute;
+        border-radius: 6px;
+        left: -50%;
+        top: -200%;
+        padding-left: 0;
+        background-color: $light;
+        list-style: none;
+        width: 200px;
+        li{
+            margin: 0 !important;
+            color: $dark;
+            padding: .5rem 1rem;
+            cursor: pointer;       
+            &:hover{
+                color: $main;
+            }
+        }
+    }
+}
+
+
+// Media
+
+@media screen and (max-width: 1440px) {
+    .navList li a, .navList li p{
+        font-size: 1.4rem !important;
+    }
+}
+
+@media screen and (max-width: 1340px) {
+    .navList li a{
+        font-size: 1.3rem !important;
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    .navList li a{
+        font-size: 1.2rem !important;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .navList li{
+        margin: 0 .5rem !important;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .root{
+        z-index: 15 !important;
+    }
+    .langDropDown{
+        display: none !important;
+    }
+    .navList{
+        background-color: $light;
+        padding: 2rem;
+        border-radius: 5px !important;
+        text-align: center;
+        li{
+            margin: .3rem 0 !important;
+        }
+        .lang p{
+            color: $dark !important;
+            font-size: 1.2rem !important;
+        }
+    }
+    .collapse{
+        margin-top: 1rem;
+    }
+    .flag img{
+        margin: 0 auto;
+    }
+    .navList li a{
+        color: $dark !important;
+    }
+}
+
+
+@media screen and (max-width: 700px){
+    .logo{
+        font-size: 1.5rem !important;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .burger{
+        font-size: 2rem !important;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .burger{
+        font-size: 1.8rem !important;
+    }
+}
